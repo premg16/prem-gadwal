@@ -13,7 +13,7 @@ const mainFont = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio | RUiNtheExtinct',
+  title: 'Prem Sai Gadwal',
   description: 'Developer Portfolio',
   icons: {
     icon: '/icon.ico',
