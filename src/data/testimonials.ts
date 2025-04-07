@@ -30,8 +30,8 @@ export const testimonials: Testimonial[] = [
 	},
 	{
 		id: "testimonial4",
-		name: "Prem Sai G",
-		role: "Frontend Developer",
+		name: "Arghyadeep Karmakar",
+		role: "FullStack Developer",
 		company: "Publicis Sapient",
 		avatar: "/testimonials/testimonial-4.webp",
 		testimonial:

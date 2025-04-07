@@ -1,15 +1,24 @@
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
-import { cn } from '@/lib/utils';
+import BackgroundEffects from '@/components/shared/background-effects'; // New component for bg effects
+import Footer from '@/components/shared/footer';
+import Navbar from '@/components/shared/navbar';
+import { ThemeProvider } from '@/components/shared/theme-provider';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { DM_Serif_Display } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const mainFont = DM_Serif_Display({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 export const metadata: Metadata = {
-  title: 'Prem Sai Gadwal | Portfolio',
-  description: 'Personal portfolio website showcasing my projects and experience',
+  title: 'Portfolio | RUiNtheExtinct',
+  description: 'Developer Portfolio',
+  icons: {
+    icon: '/icon.ico',
+    shortcut: '/icon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -18,13 +27,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={cn(inter.className, 'min-h-screen bg-background antialiased')}>
-        <div className="relative flex min-h-screen flex-col">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/icon.ico" type="image/ico" />
+      </head>
+      <body className={mainFont.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          // disableTransitionOnChange
+        >
+          <BackgroundEffects />
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main>{children}</main>
+          <SpeedInsights />
           <Footer />
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

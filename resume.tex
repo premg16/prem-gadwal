@@ -1,0 +1,255 @@
+%%%%
+% Prem Sai Gadwal's FAANG-Optimized Resume
+%%%%
+% Based on MTecknology's Resume Template
+% License: CC-BY-4
+% - https://creativecommons.org/licenses/by/4.0/legalcode.txt
+%%%%
+
+\documentclass[letterpaper,10pt]{article}
+
+% Dependencies
+% NOTE: Some packages (lastpage, hyperref) require second build!
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+
+% Serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% Colors
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+
+% Misc. Options
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+% Adjust Margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+% ATS Readability
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-----------------%
+% Custom Commands %
+%-----------------%
+
+% Centered title along with subtitle between HR
+% Usage: \documentTitle{Name}{Details}
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+
+% Create a footer with correct padding
+% Usage: \documentFooter{\thepage of X}
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+
+% Simple wrapper to set up page numbering
+% Usage: \numberedPages
+% WARNING: Must run pdflatex twice!
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+
+% Section heading with horizontal rule
+% Usage: \section{Title}
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+% Section heading with separator and content on same line
+% Usage: \tinysection{Title}
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+% Indented line with arguments left/right aligned in document
+% Usage: \heading{Left}{Right}
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+
+% Adds \textbf to \heading
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+% Adds \textit to \heading
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+% Template for itemized lists
+% Usage: \begin{resume_list} [items] \end{resume_list}
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=30pt]
+}{
+  \end{itemize}
+}
+
+% Formats an item to use as an itemized title
+% Usage: \itemTitle{Title}
+\newcommand{\itemTitle}[1]{
+  \item[] \underline{#1}\vspace{4pt}
+}
+
+% Bullets used in itemized lists
+\renewcommand\labelitemi{--}
+
+%======================%
+% Prem Sai's Resume    %
+%======================%
+
+\begin{document}
+
+  %---------%
+  % Heading %
+  %---------%
+
+  \documentTitle{PREM SAI GADWAL}{
+    \href{tel:6360231174}{
+      \raisebox{-0.05\height} \faPhone\ +91-6360231174} ~ | ~
+    \href{mailto:premsaig1605@gmail.com}{
+      \raisebox{-0.15\height} \faEnvelope\ premsaig1605@gmail.com} ~ | ~
+    \href{https://linkedin.com/in/prem-sai-gadwal-b665811a1/}{
+      \raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/prem-sai-gadwal-b665811a1/} ~ | ~
+    \href{https://github.com/premg16}{
+      \raisebox{-0.15\height} \faGithub\ github.com/premg16}
+  }
+
+  %---------%
+  % Summary %
+  %---------%
+
+  \tinysection{Summary}
+Full-Stack Developer and AI Engineer with 2+ years of experience building production-scale AI systems and web applications. Expertise in \textbf{Generative AI, LLM integrations, and real-time applications} using Next.js, TypeScript, and Python. Demonstrated success designing and implementing high-performance systems supporting thousands of concurrent users while delivering exceptional user experiences.
+
+  %--------%
+  % Skills %
+  %--------%
+
+  \section{Skills}
+
+  \begin{resume_list}
+    \item \textbf{Programming Languages:} TypeScript, Python, C++, Java, Bash
+    \item \textbf{Frameworks \& Libraries:} Next.js, React.js, Node.js, FastAPI, Flask, LangChain
+    \item \textbf{AI/ML:} LLM Integration (OpenAI, Llama, HuggingFace), RAG, Stable Diffusion, Imagen, Flux
+    \item \textbf{Cloud \& Infrastructure:} AWS, GCP, Azure, Kubernetes, Docker, Terraform
+    \item \textbf{Developer Tools:} Git, CI/CD, Jenkins, VS Code Extension Development
+    \item \textbf{Design:} Figma, Blender, Spline, Illustrator
+  \end{resume_list}
+
+  %------------%
+  % Experience %
+  %------------%
+
+  \section{Professional Experience}
+
+  \headingBf{Publicis Sapient}{June 2024 -- Present}
+  \headingIt{Associate Software Development Engineer L2}{}
+  \begin{resume_list}
+    \itemTitle{AI Studio}
+    \item \textbf{Led frontend development} for an enterprise-grade AI multimedia studio processing 10,000+ image generation requests daily using \textbf{Stable Diffusion, Flux, and Imagen 3}
+    \item \textbf{Developed “PromptBoost”}, an internal AI tool that auto-tuned user prompts based on user behavior analytics, improving image generation success rate by 25%.
+    \item \textbf{Reduced load time by 40\%} by implementing efficient state management and optimizing API calls for high-volume asset rendering
+    \item \textbf{Designed and built} a real-time streaming Chat UI with multi-modal capabilities (text, image, audio) that increased user engagement by 35\%
+    \item \textbf{Implemented custom React hooks} to streamline LLM integration, reducing boilerplate code by 50\% and accelerating feature development
+    \item \textbf{Established performance benchmarks} and implemented monitoring for AI systems, maintaining 99.9\% uptime and sub-200ms response times
+  \end{resume_list}
+  \begin{resume_list}
+    \itemTitle{Engage Next}
+    \item \textbf{Scaled Quiz Next platform} to handle 5,000+ concurrent users with real-time leaderboards and interactive elements
+    \item \textbf{Achieved 98\% test coverage} while integrating new AI features, resulting in zero critical bugs during production launch
+    \item \textbf{Engineered multilingual virtual assistant} with context-aware responses using vector databases and RAG, supporting 8 languages
+    \item \textbf{Implemented real-time data synchronization} using WebSockets, reducing latency by 60\% for competitive quiz features
+    \item \textbf{Optimized image generation pipeline}, cutting processing time from 5s to 1.2s while maintaining high-quality outputs
+  \end{resume_list}
+
+  \headingBf{Publicis Sapient}{June 2022 -- June 2024}
+  \headingIt{Associate Software Development Engineer L1}{}
+  \begin{resume_list}
+    \itemTitle{Quiz Next}
+    \item \textbf{Developed end-to-end AI-powered quiz generation system} using RAG to automatically create quizzes from transcripts and session content
+    \item \textbf{Built scalable backend architecture} on GCP that processed 500+ concurrent quiz sessions with real-time scoring and analytics
+    \item \textbf{Reduced question generation latency by 65\%} through caching strategies and optimized model inference
+    \item \textbf{Created dashboard with real-time analytics} that increased client adoption of the platform by 45\%
+    \vspace{3pt}
+    \itemTitle{Codebuddy - VS Code Extension}
+    \item \textbf{Co-developed VS Code extension} for AI-assisted coding that achieved 3,000+ installs within first month
+    \item \textbf{Architected integration layer} for multiple LLM providers, allowing seamless switching between models
+    \item \textbf{Implemented token-efficient code chunking} algorithm that reduced API costs by 30\% while improving code context understanding
+    \item \textbf{Built streaming response UI} with syntax highlighting and code completion that reduced development time for users by 20\%
+  \end{resume_list}
+
+  %-----------%
+  % Education %
+  %-----------%
+
+  \section{Education}
+
+  \headingBf{Indian Institute of Information Technology, Surat}{2017 -- 2022}
+  \headingIt{Bachelor of Technology in Electronics and Communication}{}
+
+  \vspace{5pt}
+  \headingBf{Certifications}{}
+  \begin{resume_list}
+    \item AWS Cloud Practitioner
+    \item Google Cloud Digital Leader
+  \end{resume_list}
+
+  %----------------------%
+  % Projects & Contrib   %
+  %----------------------%
+
+  \section{Projects \& Contributions}
+
+  \headingBf{AI Technology Writer | Medium}{Mar 2023 -- Present}
+  \begin{resume_list}
+    \item Published 12+ technical articles on Generative AI applications, garnering 50,000+ total views
+    \item Created practical tutorials for implementing LLMs in production environments
+    \item Analyzed emerging trends in text-to-image/video models and their industry applications
+  \end{resume_list}
+
+\end{document}
