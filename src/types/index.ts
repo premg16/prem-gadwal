@@ -52,7 +52,9 @@ export interface Skill {
 		| "languages"
 		| "mobile"
 		| "ai"
-		| "other";
+		| "other"
+		| "programming"
+		| "tools";
 	level: "beginner" | "intermediate" | "advanced" | "expert";
 	description: string;
 	relatedTech: string[];
