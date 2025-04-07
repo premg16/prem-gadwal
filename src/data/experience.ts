@@ -1,0 +1,167 @@
+import type { Experience } from "@/types";
+
+export const experiences: Experience[] = [
+	{
+		id: "workipo-1",
+		company: "WorkIPO",
+		location: "Mumbai, Maharashtra",
+		startDate: "March 2025",
+		endDate: "Present",
+		technologies: ["React.js", "Python", "Flask", "PostgreSQL"],
+		projects: [
+			{
+				id: "sde-l2",
+				role: "Software Development Engineer L2",
+				name: "Malibu",
+				description:
+					"Inventory management, tracing and monitoring platform for manufacturing companies.",
+				achievements: [
+					"Setup modular testing suite and automated CI pipelines using GitHub Actions.",
+					"Implemented a traceability solution for manufacturing processes, allowing for efficient tracking of products.",
+					"Develop order tracking and management systems.",
+				],
+				technologies: ["React.js", "Python", "Flask", "PostgreSQL"],
+			},
+		],
+	},
+	{
+		id: "publicis-sapient-1",
+		company: "Publicis Sapient",
+		location: "Bangalore, Karnataka",
+		startDate: "June 2022",
+		endDate: "March 2025",
+		achievements: [
+			"Led a cross-functional team of 20+ engineers to build an AI-powered multimedia studio.",
+			"Architected and deployed a production LLM pipeline handling 10K+ daily requests with 99.9% uptime.",
+			"Optimized full-stack performance serving over 65K monthly active users.",
+			"Reduced operational costs by 2.5x through optimized GPU infrastructure provisioning.",
+			"Established scalable CI pipelines using Azure CI for the CoreAI platform.",
+			"Automated cloud infrastructure provisioning with Terraform.",
+			"Implemented a streamlined checkout process reducing abandonment rate by 45%.",
+		],
+		technologies: [
+			"Next.js",
+			"Python",
+			"FastAPI",
+			"Redis",
+			"Prisma",
+			"Java",
+			"Spring Boot",
+			"React",
+			"SQL",
+			"Generative AI",
+			"RAG",
+			"Stable Diffusion",
+			"Flux",
+			"Runway",
+			"HeyGen",
+			"Azure CI",
+			"Terraform",
+			"Kubernetes",
+			"Blob Storage",
+			"Databases",
+			"React-Native",
+			"AR",
+			"Mobile Development",
+		],
+		projects: [
+			{
+				id: "sde-l1",
+				role: "Software Development Engineer L1",
+				name: "AI Studio",
+				description:
+					"Led development of an AI-powered multimedia studio and content generation platform using Next.js for the frontend and Python/FastAPI, Redis, and Prisma for the backend. Architected a robust LLM pipeline to process 10K+ daily requests.",
+				achievements: [
+					"Directed a team of 20+ engineers in end-to-end platform development.",
+					"Achieved 99.9% uptime with an average response time of 800ms.",
+					"Integrated multiple image and video generation models to enhance user experience.",
+				],
+				technologies: [
+					"Next.js",
+					"Python",
+					"FastAPI",
+					"Redis",
+					"Prisma",
+					"GPT-4",
+					"Claude",
+					"Gemini Pro",
+					"Stable Diffusion",
+					"Flux",
+					"Dall-e",
+					"Imagen",
+					"Runway",
+					"HeyGen",
+				],
+			},
+			{
+				id: "sde-l1",
+				role: "Software Development Engineer L1",
+				name: "Enterprise Cloud Management Platform",
+				description:
+					"Led a multidisciplinary team of 30 engineers in building a scalable cloud management platform using Spring Boot, React, and SQL databases. Focused on microservices architecture and real-time data pipelines.",
+				achievements: [
+					"Directed architecture and implementation of microservices handling 1M+ API requests daily.",
+					"Optimized frontend performance, resulting in a 40% increase in user engagement.",
+					"Reduced deployment cycles by 50% through improved DevOps practices.",
+				],
+				technologies: [
+					"Spring Boot",
+					"React",
+					"SQL",
+					"Kafka",
+					"Jenkins",
+					"Kubernetes",
+				],
+			},
+			{
+				id: "associate-sde-l2",
+				role: "Associate Software Development Engineer L2",
+				name: "CoreAI Platform Automation",
+				description:
+					"Developed templated CI pipelines and automated cloud infrastructure provisioning (including Kubernetes clusters, blob storage, and databases) for the CoreAI platform.",
+				achievements: [
+					"Streamlined project onboarding and deployment across 20+ teams.",
+					"Cut operational GPU workload costs by approximately 2.5x.",
+				],
+				technologies: [
+					"Azure CI",
+					"Terraform",
+					"Kubernetes",
+					"Blob Storage",
+					"Databases",
+				],
+			},
+			{
+				id: "associate-sde-l2",
+				role: "Associate Software Development Engineer L2",
+				name: "Enterprise API",
+				description:
+					"Developed a hierarchical role management system using Java and Spring Boot, designed resource management solutions with PostgreSQL, and integrated monitoring tools to enhance system observability.",
+				achievements: [
+					"Enhanced resource allocation efficiency by 30% for over 1M users.",
+					"Handled thousands of requests per second with optimized caching and query performance.",
+				],
+				technologies: [
+					"Java",
+					"Spring Boot",
+					"PostgreSQL",
+					"Kibana",
+					"Prometheus",
+					"Zipkin",
+				],
+			},
+			{
+				id: "associate-sde-l1",
+				role: "Associate Software Development Engineer L1",
+				name: "Container Store AR App",
+				description:
+					"Developed an AR-based mobile application for Container Store that enhanced product visualization, streamlined the checkout process, and integrated administrative functionalities for efficient user and inventory management.",
+				achievements: [
+					"Developed real time React Native AR rendering engine which registed 3D models from JSON and displayed them as AR objects.",
+					"Reduced cart abandonment by 45%, processing over $100K in monthly transactions.",
+				],
+				technologies: ["React-Native", "AR", "Mobile Development"],
+			},
+		],
+	},
+];
