@@ -90,7 +90,7 @@ _Bachelor of Technology in Electronics and Communication_
 
 ## Latest Projects
 
-Check out my [portfolio](https://rte-portfolio.vercel.app) for my latest projects including:
+Check out my [portfolio](https://prem-gadwal.vercel.app/) for my latest projects including:
 
 - Open Source Portfolio Template
 - AI Studio

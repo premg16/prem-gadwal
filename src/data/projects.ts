@@ -9,7 +9,7 @@ export const projects: Project[] = [
       'A responsive and performant portfolio website showcasing my work and skills. Features dark mode, animations, and a clean design focused on user experience. Built from ground up to be a template for anyone to use.',
     image: '/projects/portfolio-website.webp',
     tags: ['Next.js', 'TypeScript', 'Shadcn UI', 'TailwindCSS', 'Framer Motion'],
-    demoUrl: 'https://rte-portfolio.vercel.app',
+    demoUrl: 'https://prem-gadwal.vercel.app/',
     repoUrl: 'https://github.com/premg16/prem-gadwal',
     featured: true,
     category: 'web',
