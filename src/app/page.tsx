@@ -1,25 +1,23 @@
-import AboutSection from "@/components/sections/about-section";
-import CertificatesSection from "@/components/sections/certificates-section";
-import ContactSection from "@/components/sections/contact-section";
-import EducationSection from "@/components/sections/education-section";
-import ExperienceSection from "@/components/sections/experience-section";
-import HeroSection from "@/components/sections/hero-section";
-import ProjectsSection from "@/components/sections/projects-section";
-import SkillsSection from "@/components/sections/skills-section";
-import TestimonialsSection from "@/components/sections/testimonials-section";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
+import Hero from "@/components/hero";
+import Navbar from "@/components/navbar";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
+import Work from "@/components/work";
 
 export default function Home() {
-	return (
-		<div>
-			<HeroSection />
-			<AboutSection />
-			<SkillsSection />
-			<ExperienceSection />
-			<ProjectsSection />
-			<EducationSection />
-			<TestimonialsSection />
-			<CertificatesSection />
-			<ContactSection />
-		</div>
-	);
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Work />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }

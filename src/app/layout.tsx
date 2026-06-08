@@ -1,49 +1,52 @@
-import BackgroundEffects from '@/components/shared/background-effects'; // New component for bg effects
-import Footer from '@/components/shared/footer';
-import Navbar from '@/components/shared/navbar';
-import { ThemeProvider } from '@/components/shared/theme-provider';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import type { Metadata } from 'next';
-import { DM_Serif_Display } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { DM_Serif_Display, Inter, DM_Mono } from "next/font/google";
+import "./globals.css";
 
-const mainFont = DM_Serif_Display({
-  subsets: ['latin'],
-  weight: '400',
+const serif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const sans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const mono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: 'Prem Sai Gadwal',
-  description: 'Developer Portfolio',
-  icons: {
-    icon: '/icon.ico',
-    shortcut: '/icon.ico',
+  title: "Prem Sai Gadwal",
+  description:
+    "Full-Stack Developer and AI Engineer. Building production-scale AI systems and web applications with Next.js, TypeScript, and Python.",
+  icons: { icon: "/icon.ico", shortcut: "/icon.ico" },
+  openGraph: {
+    title: "Prem Sai Gadwal",
+    description: "Full-Stack Developer & AI Engineer",
+    type: "website",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/icon.ico" type="image/ico" />
-      </head>
-      <body className={mainFont.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          // disableTransitionOnChange
-        >
-          <BackgroundEffects />
-          <Navbar />
-          <main>{children}</main>
-          <SpeedInsights />
-          <Footer />
-        </ThemeProvider>
+    <html
+      lang="en"
+      className={`${serif.variable} ${sans.variable} ${mono.variable}`}
+    >
+      <body className="font-sans bg-bg text-text antialiased">
+        <div className="grain" aria-hidden="true" />
+        {children}
       </body>
     </html>
   );
