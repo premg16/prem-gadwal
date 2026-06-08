@@ -1,7 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { MDXProps } from "mdx/types";
 import type { StaticImageData } from "next/image";
-import { JSX } from "react";
 import { IconType } from "react-icons";
 
 // Personal Info Types
@@ -89,16 +87,14 @@ export interface ProjectExperience {
 
 // Represents a continuous tenure at a single company
 export interface Experience {
-	id: string; // Unique ID for the tenure
+	id: string;
 	company: string;
 	companyLogo?: string | StaticImageData;
 	location?: string;
 	startDate: string;
 	endDate: string | "Present";
-	// Overall achievements/tech used during the entire tenure
 	achievements?: string[];
 	technologies?: string[];
-	// Array of specific roles/projects held during this tenure
 	projects: ProjectExperience[];
 }
 
@@ -147,7 +143,6 @@ export interface BlogPost {
 	author: string;
 	readingTime: string;
 	coverImage?: string;
-	content?: (props: MDXProps) => JSX.Element;
 	tags: string[];
 	isExternal?: boolean;
 	externalUrl?: string;

@@ -1,6 +1,3 @@
-import GettingStartedWithNextjs from "@/content/blog/getting-started-with-nextjs.mdx";
-import PortfolioConfiguration from "@/content/blog/portfolio-configuration.mdx";
-import TypeScriptBestPractices from "@/content/blog/typescript-best-practices.mdx";
 import type { BlogPost } from "@/types";
 
 export const externalBlogs: BlogPost[] = [
@@ -108,48 +105,7 @@ export const externalBlogs: BlogPost[] = [
 	},
 ];
 
-export const internalBlogs: BlogPost[] = [
-	{
-		slug: "using-this-template-to-build-your-portfolio",
-		title: "Using this portfolio as a template to build your own",
-		date: "01-04-2025",
-		excerpt: "Using this template to build your portfolio.",
-		author: "Arghyadeep Karmakar",
-		readingTime: "5 min read",
-		coverImage: "/blog/portfolio-configuration.webp",
-		tags: ["Portfolio", "Template", "Build"],
-		isExternal: false,
-		externalUrl: "",
-		content: PortfolioConfiguration,
-	},
-	{
-		slug: "getting-started-with-nextjs",
-		title: "Getting Started with Next.js",
-		date: "15-03-2024",
-		excerpt:
-			"Learn how to get started with Next.js and build your first application.",
-		author: "Arghyadeep Karmakar",
-		readingTime: "12 min read",
-		tags: ["Next.js", "Performance", "Web Development"],
-		coverImage: "/blog/getting-started-with-nextjs.webp",
-		isExternal: false,
-		externalUrl: "",
-		content: GettingStartedWithNextjs,
-	},
-	{
-		slug: "typescript-best-practices",
-		title: "TypeScript Best Practices for 2024",
-		date: "2024-02-25",
-		excerpt: "Improve your TypeScript code with these modern best practices",
-		author: "Arghyadeep Karmakar",
-		readingTime: "15 min read",
-		tags: ["TypeScript", "Programming", "Best Practices"],
-		coverImage: "/blog/typescript-best-practices.webp",
-		isExternal: false,
-		externalUrl: "",
-		content: TypeScriptBestPractices,
-	},
-];
+export const internalBlogs: BlogPost[] = [];
 
 export const allBlogs = [...externalBlogs, ...internalBlogs].sort(
 	(a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
